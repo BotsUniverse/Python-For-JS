@@ -35,7 +35,7 @@ function int(value){
 function sum(iretables_list){
   //returns the sum of the given items in the iterable
   var total = 0;
-  var iretables = iretable_list;
+  var iretables = iretables_list;
   var item;
   for (item in iretables){
     total += iretables[item];
