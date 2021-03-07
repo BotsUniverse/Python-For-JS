@@ -1,6 +1,6 @@
 /*
 A script of the programmers who have used PYTHON and are now wsing JAVASCRIPT
-This script has some of the built-in function in python as the javascript functions
+This script has some of the built-in function of python as the javascript functions
 that will make you feel easier with JAVASCRIPT.
 
 Available Functions:
@@ -10,7 +10,7 @@ Available Functions:
   4. max(*args)
   5. min(*args)
   6. abs(number)
-  7. len(array_or_string)
+  7. len(iritables)
   8. format(text, format_specs)
   9. zip(Arrays)
   10. round(number)
