@@ -14,6 +14,14 @@ Available Functions:
   8. format(text, format_specs)
   9. zip(Arrays)
   10. round(number)
+  11. strip(string)
+  12. print(*args)
+  13. upper(string)
+  14. lower(string)
+  15. any(iritables)
+  15. all(iritables)
+  16. input(message)
+  17. join(string, item)
 
 --All functions are made just to resemble the functions in python
 --some may or may not work in the same way as the python's function does
@@ -42,7 +50,6 @@ function sum(iretables_list){
   }
   return total;
 }
-
 
 function max(){
   //A function that returns the maximum
@@ -77,7 +84,11 @@ function abs(number){
 
 function len(iretables){
   //Returns the lengeth of the iretable or the string given.
-  return iretables.length;
+  var count = 0
+  for (a in iretables){
+    count ++
+  }
+  return count
 }
 
 function format(value, format_specs){
@@ -126,4 +137,85 @@ function zip(){
 function round(number){
   //Returns the nearest rounded number
   return Math.round(number);
+}
+
+function strip(string){
+  return trim(string)
+}
+
+function print(){
+  for (var a = 0; a < arguments.length; a++){
+    console.log(arguments[a])
+  }
+}
+
+function upper(string){
+  return string.toLowerCase()
+}
+
+function lower(string){
+  return string.toLowerCase()
+}
+
+function any(iritable){
+  for (var i = 0; i < iritable.length; i++){
+    if (iritable[i]){
+      return true
+    }
+    else{
+      if (i === iritable.length - 1){
+        return false
+      }
+      continue
+    }
+  }
+}
+
+function all(iritable){
+  for (var i = 0; i < iritable.length; i++){
+    if (iritable[i]){
+      if (i === iritable.length - 1){
+        return true
+      }
+      continue
+    }
+    else{
+      return false
+    }
+  }
+}
+
+function bool(value){
+  return Boolean(value)
+}
+
+function input(value){
+  var inp = prompt(str(value));
+  return inp
+}
+/*
+UNDER CONS
+function capitalise(string){
+  var str_list = string.split(" ")
+  print(str_list)
+  var text = '';
+  for (var i = 0; i < str_list; i++){
+    for (var j = 0; j < len(str_list[i]); j++){
+      if (j < 1){
+        text += upper(str_list[i][j])
+      }
+      else{
+        text += str_list[i][j]
+      }
+    }
+  }
+  return text
+}
+
+print(capitalise('h a n'))
+*/
+function join(string, item){
+  sting = str(string)
+  sting += str(item)
+  return sting
 }
