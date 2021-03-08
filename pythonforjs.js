@@ -22,25 +22,27 @@ Available Functions:
   15. all(iritables)
   16. input(message)
   17. join(string, item)
+  18. splitlines(string)
+  19. append(list, item)
 
 --All functions are made just to resemble the functions in python
 --some may or may not work in the same way as the python's function does
 --so if you can please modify it and reply the modifications at: replyerrors.parvat@gmail.com
 */
 
-function str(value){
+function str(value = 7 || 7.7 || '7'){
   //A 'str' function that changes 
   //any value into string
   return String(value);
 }
 
-function int(value){
+function int(value = '7' || 7.7){
   //A 'int' function that changes
   //the string into integet
   return parseInt(value);
 }
 
-function sum(iretables_list){
+function sum(iretables_list = []){
   //returns the sum of the given items in the iterable
   var total = 0;
   var iretables = iretables_list;
@@ -77,12 +79,12 @@ function min(){
   return minimum;
 }
 
-function abs(number){
+function abs(number = 7){
   //returns the absolute value of the given number
   return Math.abs(number);
 }
 
-function len(iretables){
+function len(iretables = []){
   //Returns the lengeth of the iretable or the string given.
   var count = 0
   for (a in iretables){
@@ -91,7 +93,7 @@ function len(iretables){
   return count
 }
 
-function format(value, format_specs){
+function format(value = '', format_specs = []){
   //The format function that replaces the '{}' with its
   //respective element in the 'format_specs'.
   var fs = format_specs;
@@ -134,7 +136,7 @@ function zip(){
   });
 }
 
-function round(number){
+function round(number = 7.7){
   //Returns the nearest rounded number
   return Math.round(number);
 }
@@ -149,15 +151,15 @@ function print(){
   }
 }
 
-function upper(string){
+function upper(string = ''){
   return string.toLowerCase()
 }
 
-function lower(string){
+function lower(string = ''){
   return string.toLowerCase()
 }
 
-function any(iritable){
+function any(iritable = []){
   for (var i = 0; i < iritable.length; i++){
     if (iritable[i]){
       return true
@@ -171,7 +173,7 @@ function any(iritable){
   }
 }
 
-function all(iritable){
+function all(iritable = []){
   for (var i = 0; i < iritable.length; i++){
     if (iritable[i]){
       if (i === iritable.length - 1){
@@ -214,8 +216,28 @@ function capitalise(string){
 
 print(capitalise('h a n'))
 */
-function join(string, item){
+function join(string = '', item = ''){
   sting = str(string)
   sting += str(item)
   return sting
+}
+
+function splitlines(string = ''){
+  var string = string
+  var my_list = []
+  for (var i = 0; i < string.split('\n').length; i++) {
+    my_list.push(string.split('\n')[i])
+  }
+  return my_list
+}
+
+function append(list = [], append_list = false){
+  var list = list;
+  var append_list = append_list;
+  for (var i = 0; i < arguments.length; i++){
+    if (i !== 0){
+      list.push(arguments[i]);
+    }
+  }
+  return list
 }
